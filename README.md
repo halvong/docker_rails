@@ -1,6 +1,6 @@
 Docker for Rails
-1/28, Mon
-pg75
+2/01, Fri
+pg87, Javascript
 
 
 
