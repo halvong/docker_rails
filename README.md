@@ -1,6 +1,6 @@
 Docker for Rails
 3/06, Wed
-pg80
+pg81
 
 
 
@@ -20,3 +20,6 @@ docker-compose up logs -f web
 mkdir -p .env/development, pg77
 docker-compose run --rm web bin/rails db:create, pg78
 docker-compose up -d --force-recreate web   --recreate container web
+docker-compose exec web bin/rails g scaffold User first_name:string last_name:string, pg80
+docker-compose exec web bin/rails db:migrate
+http://localhost:3000/users
