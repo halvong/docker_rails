@@ -1,6 +1,7 @@
 Docker for Rails
-1/28, Mon
-pg75
+3/06, Wed
+pg87
+going to chp7, javascript
 
 
 
@@ -15,3 +16,14 @@ docker-compose stop
 docker-compose ps
 docker-compose up -d database
 docker-compose run --rm database psql -U postgres -h database
+docker-compose up logs -f database
+docker-compose up logs -f web
+mkdir -p .env/development, pg77
+docker-compose run --rm web bin/rails db:create, pg78
+docker-compose up -d --force-recreate web   --recreate container web
+docker-compose exec web bin/rails g scaffold User first_name:string last_name:string, pg80
+docker-compose exec web bin/rails db:migrate
+http://localhost:3000/users
+docker-compose stop database
+docker-compose rm -f database  - removes database from container, wipes out database and data, pg83
+docker-compose up -d database
