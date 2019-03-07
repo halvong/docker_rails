@@ -13,6 +13,8 @@ services:
     image: redis
   database:
     image: postgres
+    ports:
+      - "5432"
     env_file:
       - .env/development/database
     volumes:
