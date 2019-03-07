@@ -14,3 +14,4 @@ docker-compose run --rm redis redis-cli -h redis #connects to redis cli
 docker-compose stop
 docker-compose ps
 docker-compose up -d database
+docker-compose run --rm database psql -U postgres -h database
