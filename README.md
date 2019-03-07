@@ -1,6 +1,6 @@
 Docker for Rails
-1/28, Mon
-pg75
+3/06, Wed
+pg80
 
 
 
@@ -15,3 +15,8 @@ docker-compose stop
 docker-compose ps
 docker-compose up -d database
 docker-compose run --rm database psql -U postgres -h database
+docker-compose up logs -f database
+docker-compose up logs -f web
+mkdir -p .env/development, pg77
+docker-compose run --rm web bin/rails db:create, pg78
+docker-compose up -d --force-recreate web   --recreate container web
