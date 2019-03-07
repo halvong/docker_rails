@@ -1,6 +1,7 @@
 Docker for Rails
 3/06, Wed
-pg81
+pg87
+going to chp7, javascript
 
 
 
@@ -23,3 +24,6 @@ docker-compose up -d --force-recreate web   --recreate container web
 docker-compose exec web bin/rails g scaffold User first_name:string last_name:string, pg80
 docker-compose exec web bin/rails db:migrate
 http://localhost:3000/users
+docker-compose stop database
+docker-compose rm -f database  - removes database from container, wipes out database and data, pg83
+docker-compose up -d database
