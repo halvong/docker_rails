@@ -6,6 +6,31 @@
 
 # Ignore bundler config.
 /.bundle
+/.ideaversion: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+    env_file:
+      - .env/development/database
+      - .env/development/web
+  redis:
+    image: redis
+  database:
+    image: postgres
+    ports:
+      - "5432"
+    env_file:
+      - .env/development/database
+    volumes:
+      - db_data:/var/lib/postgresql/data
+volumes:
+  db_data:
+log
+tmp
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -29,3 +54,8 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/public/packs
+/public/packs-test
+/node_modules
+yarn-debug.log*
+.yarn-integrity
