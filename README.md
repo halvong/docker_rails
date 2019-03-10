@@ -27,3 +27,6 @@ http://localhost:3000/users
 docker-compose stop database
 docker-compose rm -f database  - removes database from container, wipes out database and data, pg83
 docker-compose up -d database
+docker-compose up -d web
+docker-compose run web rails webpacker:install
+docker-compose run web rails webpacker:install:react
