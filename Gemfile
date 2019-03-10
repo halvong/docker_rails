@@ -9,6 +9,9 @@ gem 'pg', '~> 1.0'
 gem 'redis', '~> 4.0'
 gem 'webpacker', '~> 3.5'
 
+
+
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -43,6 +46,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 3.8'
+  gem 'capybara', '~> 3.7'
 end
 
 group :development do
