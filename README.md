@@ -1,5 +1,5 @@
 Docker for Rails
-3/09, Sat
+3/26, Tues
 pg101
 Running Tests That Rely on JavaScript
 
@@ -42,4 +42,5 @@ docker-compose exec web rails spec
 docker-compose exec web rails generate rspec:model user
 docker-compose exec web rails spec, pg98
 docker-compose exec web rspec spec/system/, pg101
+docker-compose up -d selenium_chrome, pg 104
 

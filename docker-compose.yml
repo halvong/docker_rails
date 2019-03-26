@@ -28,6 +28,13 @@ services:
   redis:
     image: redis
 
+  #selenium_chrome:
+    #image: selenium/standalone-chrome-debug
+    #logging:
+    #  driver: none
+    #ports:
+    #  - "5900:5900"
+
   database:
     image: postgres
     env_file:
