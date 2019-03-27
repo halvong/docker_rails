@@ -1,6 +1,6 @@
 Docker for Rails
-3/26, Tues
-pg101
+3/27, Wed
+pg109
 Running Tests That Rely on JavaScript
 
 
@@ -43,4 +43,7 @@ docker-compose exec web rails generate rspec:model user
 docker-compose exec web rails spec, pg98
 docker-compose exec web rspec spec/system/, pg101
 docker-compose up -d selenium_chrome, pg 104
+IN vnc client: #107
+    localhost:5900
+   
 
